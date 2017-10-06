@@ -18,5 +18,8 @@
             "DHL\\Express\\Webservice\\Tracking\\": "src-tracking/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "ramsey/uuid": "@stable"
+    }
 }
