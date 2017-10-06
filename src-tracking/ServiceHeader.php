@@ -4,7 +4,6 @@ namespace DHL\Express\Webservice\Tracking;
 
 class ServiceHeader
 {
-
     /**
      * @var \DateTime $MessageTime
      */
@@ -21,8 +20,8 @@ class ServiceHeader
      */
     public function __construct(\DateTime $MessageTime, $MessageReference)
     {
-      $this->MessageTime = $MessageTime->format(\DateTime::ATOM);
-      $this->MessageReference = $MessageReference;
+        $this->MessageTime = $MessageTime->format(\DateTime::ATOM);
+        $this->MessageReference = $MessageReference;
     }
 
     /**
@@ -30,15 +29,15 @@ class ServiceHeader
      */
     public function getMessageTime()
     {
-      if ($this->MessageTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->MessageTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->MessageTime == null) {
+            return null;
         }
-      }
+
+        try {
+            return new \DateTime($this->MessageTime);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     /**
@@ -47,8 +46,8 @@ class ServiceHeader
      */
     public function setMessageTime(\DateTime $MessageTime)
     {
-      $this->MessageTime = $MessageTime->format(\DateTime::ATOM);
-      return $this;
+        $this->MessageTime = $MessageTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -56,7 +55,7 @@ class ServiceHeader
      */
     public function getMessageReference()
     {
-      return $this->MessageReference;
+        return $this->MessageReference;
     }
 
     /**
@@ -65,8 +64,8 @@ class ServiceHeader
      */
     public function setMessageReference($MessageReference)
     {
-      $this->MessageReference = $MessageReference;
-      return $this;
+        $this->MessageReference = $MessageReference;
+        return $this;
     }
 
 }

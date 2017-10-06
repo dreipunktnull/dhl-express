@@ -5,9 +5,9 @@
 {
     $classes = array(
         'DHL\Express\Webservice\Tracking\GblDHLExpressTrack' => __DIR__ .'/GblDHLExpressTrack.php',
-        'DHL\Express\Webservice\Tracking\trackShipmentRequest' => __DIR__ .'/trackShipmentRequest.php',
-        'DHL\Express\Webservice\Tracking\trackShipmentRequestResponse' => __DIR__ .'/trackShipmentRequestResponse.php',
-        'DHL\Express\Webservice\Tracking\pubTrackingRequest' => __DIR__ .'/pubTrackingRequest.php',
+        'DHL\Express\Webservice\Tracking\TrackShipmentRequest' => __DIR__ .'/trackShipmentRequest.php',
+        'DHL\Express\Webservice\Tracking\TrackShipmentRequestResponse' => __DIR__ .'/trackShipmentRequestResponse.php',
+        'DHL\Express\Webservice\Tracking\PublicTrackingRequest' => __DIR__ .'/pubTrackingRequest.php',
         'DHL\Express\Webservice\Tracking\TrackingRequest' => __DIR__ .'/TrackingRequest.php',
         'DHL\Express\Webservice\Tracking\Request' => __DIR__ .'/Request.php',
         'DHL\Express\Webservice\Tracking\ServiceHeader' => __DIR__ .'/ServiceHeader.php',

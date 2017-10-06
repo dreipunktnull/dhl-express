@@ -4,36 +4,35 @@ namespace DHL\Express\Webservice\Tracking;
 
 class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
 {
-
     /**
-     * @var AWBNumber[] $ArrayOfAWBNumberItem
+     * @var string[] $ArrayOfAWBNumberItem
      */
     protected $ArrayOfAWBNumberItem = null;
 
     /**
-     * @param AWBNumber[] $ArrayOfAWBNumberItem
+     * @param string[] $ArrayOfAWBNumberItem
      */
     public function __construct(array $ArrayOfAWBNumberItem)
     {
-      $this->ArrayOfAWBNumberItem = $ArrayOfAWBNumberItem;
+        $this->ArrayOfAWBNumberItem = $ArrayOfAWBNumberItem;
     }
 
     /**
-     * @return AWBNumber[]
+     * @return string[]
      */
     public function getArrayOfAWBNumberItem()
     {
-      return $this->ArrayOfAWBNumberItem;
+        return $this->ArrayOfAWBNumberItem;
     }
 
     /**
-     * @param AWBNumber[] $ArrayOfAWBNumberItem
+     * @param string[] $ArrayOfAWBNumberItem
      * @return \DHL\Express\Webservice\Tracking\ArrayOfAWBNumber
      */
     public function setArrayOfAWBNumberItem(array $ArrayOfAWBNumberItem)
     {
-      $this->ArrayOfAWBNumberItem = $ArrayOfAWBNumberItem;
-      return $this;
+        $this->ArrayOfAWBNumberItem = $ArrayOfAWBNumberItem;
+        return $this;
     }
 
     /**
@@ -44,34 +43,34 @@ class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-      return isset($this->ArrayOfAWBNumberItem[$offset]);
+        return isset($this->ArrayOfAWBNumberItem[$offset]);
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset The offset to retrieve
-     * @return AWBNumber
+     * @return string
      */
     public function offsetGet($offset)
     {
-      return $this->ArrayOfAWBNumberItem[$offset];
+        return $this->ArrayOfAWBNumberItem[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset The offset to assign the value to
-     * @param AWBNumber $value The value to set
+     * @param string $value The value to set
      * @return void
      */
     public function offsetSet($offset, $value)
     {
-      if (!isset($offset)) {
-        $this->ArrayOfAWBNumberItem[] = $value;
-      } else {
-        $this->ArrayOfAWBNumberItem[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->ArrayOfAWBNumberItem[] = $value;
+        } else {
+            $this->ArrayOfAWBNumberItem[$offset] = $value;
+        }
     }
 
     /**
@@ -82,17 +81,17 @@ class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-      unset($this->ArrayOfAWBNumberItem[$offset]);
+        unset($this->ArrayOfAWBNumberItem[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return AWBNumber Return the current element
+     * @return string Return the current element
      */
     public function current()
     {
-      return current($this->ArrayOfAWBNumberItem);
+        return current($this->ArrayOfAWBNumberItem);
     }
 
     /**
@@ -103,7 +102,7 @@ class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-      next($this->ArrayOfAWBNumberItem);
+        next($this->ArrayOfAWBNumberItem);
     }
 
     /**
@@ -113,7 +112,7 @@ class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-      return key($this->ArrayOfAWBNumberItem);
+        return key($this->ArrayOfAWBNumberItem);
     }
 
     /**
@@ -123,7 +122,7 @@ class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
      */
     public function valid()
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -134,17 +133,17 @@ class ArrayOfAWBNumber implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-      reset($this->ArrayOfAWBNumberItem);
+        reset($this->ArrayOfAWBNumberItem);
     }
 
     /**
      * Countable implementation
      *
-     * @return AWBNumber Return count of elements
+     * @return string Return count of elements
      */
     public function count()
     {
-      return count($this->ArrayOfAWBNumberItem);
+        return count($this->ArrayOfAWBNumberItem);
     }
 
 }

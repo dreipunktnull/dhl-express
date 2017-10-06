@@ -2,7 +2,7 @@
 
 namespace DHL\Express\Webservice\Tracking;
 
-class pubTrackingRequest
+class PublicTrackingRequest
 {
 
     /**
@@ -28,7 +28,7 @@ class pubTrackingRequest
 
     /**
      * @param TrackingRequest $TrackingRequest
-     * @return \DHL\Express\Webservice\Tracking\pubTrackingRequest
+     * @return \DHL\Express\Webservice\Tracking\PublicTrackingRequest
      */
     public function setTrackingRequest($TrackingRequest)
     {

@@ -2,22 +2,15 @@
 
 namespace DHL\Express\Webservice\Tracking;
 
-class trackShipmentRequest
+class TrackShipmentRequest
 {
-
     /**
-     * @var pubTrackingRequest $trackingRequest
+     * @var PublicTrackingRequest $trackingRequest
      */
     protected $trackingRequest = null;
 
-    
-    public function __construct()
-    {
-    
-    }
-
     /**
-     * @return pubTrackingRequest
+     * @return PublicTrackingRequest
      */
     public function getTrackingRequest()
     {
@@ -25,8 +18,8 @@ class trackShipmentRequest
     }
 
     /**
-     * @param pubTrackingRequest $trackingRequest
-     * @return \DHL\Express\Webservice\Tracking\trackShipmentRequest
+     * @param PublicTrackingRequest $trackingRequest
+     * @return \DHL\Express\Webservice\Tracking\TrackShipmentRequest
      */
     public function setTrackingRequest($trackingRequest)
     {

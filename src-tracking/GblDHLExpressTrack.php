@@ -9,40 +9,40 @@ class GblDHLExpressTrack extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = array (
-      'trackShipmentRequest' => 'DHL\\Express\\Webservice\\Tracking\\trackShipmentRequest',
-      'trackShipmentRequestResponse' => 'DHL\\Express\\Webservice\\Tracking\\trackShipmentRequestResponse',
-      'pubTrackingRequest' => 'DHL\\Express\\Webservice\\Tracking\\pubTrackingRequest',
-      'TrackingRequest' => 'DHL\\Express\\Webservice\\Tracking\\TrackingRequest',
-      'Request' => 'DHL\\Express\\Webservice\\Tracking\\Request',
-      'ServiceHeader' => 'DHL\\Express\\Webservice\\Tracking\\ServiceHeader',
-      'ArrayOfAWBNumber' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfAWBNumber',
-      'ArrayOfTrackingPieceID' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfTrackingPieceID',
-      'pubTrackingResponse' => 'DHL\\Express\\Webservice\\Tracking\\pubTrackingResponse',
-      'TrackingResponse' => 'DHL\\Express\\Webservice\\Tracking\\TrackingResponse',
-      'Response' => 'DHL\\Express\\Webservice\\Tracking\\Response',
-      'ArrayOfAWBInfo' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfAWBInfo',
-      'AWBInfo' => 'DHL\\Express\\Webservice\\Tracking\\AWBInfo',
-      'Status' => 'DHL\\Express\\Webservice\\Tracking\\Status',
-      'ArrayOfCondition' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfCondition',
-      'Condition' => 'DHL\\Express\\Webservice\\Tracking\\Condition',
-      'ShipmentInfo' => 'DHL\\Express\\Webservice\\Tracking\\ShipmentInfo',
-      'OriginServiceArea' => 'DHL\\Express\\Webservice\\Tracking\\OriginServiceArea',
-      'DestinationServiceArea' => 'DHL\\Express\\Webservice\\Tracking\\DestinationServiceArea',
-      'ArrayOfShipmentEvent' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfShipmentEvent',
-      'ShipmentEvent' => 'DHL\\Express\\Webservice\\Tracking\\ShipmentEvent',
-      'ServiceEvent' => 'DHL\\Express\\Webservice\\Tracking\\ServiceEvent',
-      'ServiceArea' => 'DHL\\Express\\Webservice\\Tracking\\ServiceArea',
-      'Reference' => 'DHL\\Express\\Webservice\\Tracking\\Reference',
-      'TrackingPieces' => 'DHL\\Express\\Webservice\\Tracking\\TrackingPieces',
-      'ArrayOfPieceInfo' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfPieceInfo',
-      'PieceInfo' => 'DHL\\Express\\Webservice\\Tracking\\PieceInfo',
-      'PieceDetails' => 'DHL\\Express\\Webservice\\Tracking\\PieceDetails',
-      'ArrayOfPieceEvent' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfPieceEvent',
-      'PieceEvent' => 'DHL\\Express\\Webservice\\Tracking\\PieceEvent',
-      'ShipperReference' => 'DHL\\Express\\Webservice\\Tracking\\ShipperReference',
-      'Fault' => 'DHL\\Express\\Webservice\\Tracking\\Fault',
-      'ArrayOfPieceFault' => 'DHL\\Express\\Webservice\\Tracking\\ArrayOfPieceFault',
-      'PieceFault' => 'DHL\\Express\\Webservice\\Tracking\\PieceFault',
+      'trackShipmentRequest' => TrackShipmentRequest::class,
+      'trackShipmentRequestResponse' => TrackShipmentRequestResponse::class,
+      'pubTrackingRequest' => PublicTrackingRequest::class,
+      'TrackingRequest' => TrackingRequest::class,
+      'Request' => Request::class,
+      'ServiceHeader' => ServiceHeader::class,
+      'ArrayOfAWBNumber' => ArrayOfAWBNumber::class,
+      'ArrayOfTrackingPieceID' => ArrayOfTrackingPieceID::class,
+      'pubTrackingResponse' => pubTrackingResponse::class,
+      'TrackingResponse' => TrackingResponse::class,
+      'Response' => Response::class,
+      'ArrayOfAWBInfo' => ArrayOfAWBInfo::class,
+      'AWBInfo' => AWBInfo::class,
+      'Status' => Status::class,
+      'ArrayOfCondition' => ArrayOfCondition::class,
+      'Condition' => Condition::class,
+      'ShipmentInfo' => ShipmentInfo::class,
+      'OriginServiceArea' => OriginServiceArea::class,
+      'DestinationServiceArea' => DestinationServiceArea::class,
+      'ArrayOfShipmentEvent' => ArrayOfShipmentEvent::class,
+      'ShipmentEvent' => ShipmentEvent::class,
+      'ServiceEvent' => ServiceEvent::class,
+      'ServiceArea' => ServiceArea::class,
+      'Reference' => Reference::class,
+      'TrackingPieces' => TrackingPieces::class,
+      'ArrayOfPieceInfo' => ArrayOfPieceInfo::class,
+      'PieceInfo' => PieceInfo::class,
+      'PieceDetails' => PieceDetails::class,
+      'ArrayOfPieceEvent' => ArrayOfPieceEvent::class,
+      'PieceEvent' => PieceEvent::class,
+      'ShipperReference' => ShipperReference::class,
+      'Fault' => Fault::class,
+      'ArrayOfPieceFault' => ArrayOfPieceFault::class,
+      'PieceFault' => PieceFault::class,
     );
 
     /**
@@ -66,10 +66,10 @@ class GblDHLExpressTrack extends \SoapClient
     }
 
     /**
-     * @param trackShipmentRequest $parameters
-     * @return trackShipmentRequestResponse
+     * @param TrackShipmentRequest $parameters
+     * @return TrackShipmentRequestResponse
      */
-    public function trackShipmentRequest(trackShipmentRequest $parameters)
+    public function trackShipmentRequest(TrackShipmentRequest $parameters)
     {
       return $this->__soapCall('trackShipmentRequest', array($parameters));
     }
