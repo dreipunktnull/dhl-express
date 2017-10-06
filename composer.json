@@ -1,0 +1,22 @@
+{
+    "name": "dreipunktnull/dhl-express",
+    "description": "DHL Express Soap CLient",
+    "type": "library",
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cedric Ziel",
+            "email": "ziel@dreipunktnull.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DHL\\Express\\Webservice\\": "src-gen/",
+            "DHL\\Express\\Webservice\\Tracking\\": "src-tracking/"
+        }
+    },
+    "minimum-stability": "dev"
+}
