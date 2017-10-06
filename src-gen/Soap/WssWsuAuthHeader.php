@@ -35,8 +35,6 @@ class WssWsuAuthHeader extends SoapHeader
 
         $security_obj = new stdClass();
 
-        $usernameToken = new \SimpleXMLElement('<root/>');
-        $usernameToken->addChild();
         $security_obj->UsernameToken = new SoapVar($auth, SOAP_ENC_OBJECT, NULL, $this->wss_ns, 'UsernameToken', $this->wss_ns);
         $security_obj->Timestamp = new SoapVar($timestamp_obj, SOAP_ENC_OBJECT, NULL, $this->wsu_ns, 'Timestamp', $this->wsu_ns);
 
