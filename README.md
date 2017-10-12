@@ -1,10 +1,24 @@
 # DHL Express SOAP API client
 
+A generated SOAP API client for the [DHL Express Global Webservice](https://www.dhl.com).
+
+## Installation
+
+To install the package, you can use composer:
+
+```
+composer require dreipunktnull/dhl-express
+```
+
+Usage without composer is currently not possible and needs some adjustments in the provided autoloader.
+
 ## Shipment Requests
 
 A shipment request is usually created through the webservice and in order to mutate (f.e. cancel) it,
 we need some parameters. You should therefore create your own `ShipmentRequest` data class and persist
 the `ShipmentDetail` data points.
+
+As of now, no such class is included.
 
 ```php
 class ShipmentRequestService
