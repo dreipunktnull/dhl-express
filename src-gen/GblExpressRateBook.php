@@ -2,6 +2,9 @@
 
 namespace DHL\Express\Webservice;
 
+use DHL\Express\Webservice\DeleteShipment\DeleteRequestType;
+use DHL\Express\Webservice\DeleteShipment\DeleteResponseType;
+use DHL\Express\Webservice\DeleteShipment\NotificationType;
 use DHL\Express\Webservice\RateRequest\AddressType2;
 use DHL\Express\Webservice\RateRequest\DimensionsType;
 use DHL\Express\Webservice\RateRequest\RequestedPackagesType2;
@@ -57,10 +60,10 @@ class GblExpressRateBook extends \SoapClient
         'docTypeRef_TotalNetType' => TotalNetType::class,
         'docTypeRef_ChargesType' => docTypeRef_ChargesType::class,
         'docTypeRef_ChargeType' => docTypeRef_ChargeType::class,
-        'docTypeRef_DeleteRequestType' => docTypeRef_DeleteRequestType::class,
-        'docTypeRef_DeleteResponseType' => docTypeRef_DeleteResponseType::class,
+        'docTypeRef_DeleteRequestType' => DeleteRequestType::class,
+        'docTypeRef_DeleteResponseType' => DeleteResponseType::class,
         'docTypeRef_ClientDetailType' => docTypeRef_ClientDetailType::class,
-        'docTypeRef_NotificationType' => docTypeRef_NotificationType::class,
+        'docTypeRef_NotificationType' => NotificationType::class,
     );
 
     /**
@@ -102,10 +105,10 @@ class GblExpressRateBook extends \SoapClient
     }
 
     /**
-     * @param docTypeRef_DeleteRequestType $parameters
-     * @return docTypeRef_DeleteResponseType
+     * @param DeleteRequestType $parameters
+     * @return DeleteResponseType
      */
-    public function deleteShipmentRequest(docTypeRef_DeleteRequestType $parameters)
+    public function deleteShipmentRequest(DeleteRequestType $parameters)
     {
         return $this->__soapCall('deleteShipmentRequest', array($parameters));
     }

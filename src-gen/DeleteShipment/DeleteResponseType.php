@@ -1,17 +1,16 @@
 <?php
 
-namespace DHL\Express\Webservice;
+namespace DHL\Express\Webservice\DeleteShipment;
 
-class docTypeRef_DeleteResponseType
+class DeleteResponseType
 {
-
     /**
-     * @var docTypeRef_NotificationType $Notification
+     * @var NotificationType $Notification
      */
     protected $Notification = null;
 
     /**
-     * @param docTypeRef_NotificationType $Notification
+     * @param NotificationType $Notification
      */
     public function __construct($Notification)
     {
@@ -19,7 +18,7 @@ class docTypeRef_DeleteResponseType
     }
 
     /**
-     * @return docTypeRef_NotificationType
+     * @return NotificationType
      */
     public function getNotification()
     {
@@ -27,13 +26,12 @@ class docTypeRef_DeleteResponseType
     }
 
     /**
-     * @param docTypeRef_NotificationType $Notification
-     * @return \DHL\Express\Webservice\docTypeRef_DeleteResponseType
+     * @param NotificationType $Notification
+     * @return DeleteResponseType
      */
     public function setNotification($Notification)
     {
       $this->Notification = $Notification;
       return $this;
     }
-
 }
