@@ -130,11 +130,7 @@ function autoload_fc80e0eb0e6728d1d6ebda8adddebaa1($class)
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
-    };
+    }
 }
 
 spl_autoload_register('autoload_fc80e0eb0e6728d1d6ebda8adddebaa1');
-
-// Do nothing. The rest is just leftovers from the code generation.
-{
-}
