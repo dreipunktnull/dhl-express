@@ -6,6 +6,15 @@ use DHL\Express\Webservice\docTypeRef_ClientDetailType;
 
 class DeleteRequestType
 {
+    const REASON_PACKAGE_NOT_READY = '001';
+    const REASON_RATES_TOO_HIGH = '002';
+    const REASON_TRANSIT_TIME_TOO_SLOW = '003';
+    const REASON_TAKE_TO_SERVICE_CENTER_OR_DROP_BOX = '004';
+    const REASON_COMMITMENT_TIME_NOT_MET = '005';
+    const REASON_REASON_NOT_GIVEN = '006';
+    const REASON_OTHER = '007';
+    const REASON_PICKUP_MODIFIED = '008';
+
     /**
      * @var docTypeRef_ClientDetailType $ClientDetail
      */
