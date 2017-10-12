@@ -54,16 +54,24 @@ class ShipmentRequestService
      * This should only be done if the pickup type is something other than PickupType::Regular.
      *
      * @param ShipmentRequest $shipmentRequest
+     * @param string $requester This parameter is required but won't be evaluated.
+     * @param string $reason    This parameter is optional but may be useful.
      * @return DeleteResponseType
      */
-    public function cancel(ShipmentRequest $shipmentRequest) {
-    
-        return $webservice->deleteShipmentRequest(new DeleteRequestType(
+    public function cancel(ShipmentRequest $shipmentRequest, $requester = 'ERNIE_OR_BERT', $reason = DeleteRequestType::REASON_REASON_NOT_GIVEN): DeleteResponseType
+    {
+        $webservice = $this->prepareWebservice();
+
+        $deleteRequest = new DeleteRequestType(
             $shipmentRequest->getShipmentTime()->format('Y-m-d'),
             $shipmentRequest->getPickupCountry(),
             $shipmentRequest->getDispatchConfirmationNumber(),
             $requester
-        ));
+        );
+
+        $deleteRequest->setReason($reason);
+
+        return $webservice->deleteShipmentRequest($deleteRequest);
     }
 
     /**
