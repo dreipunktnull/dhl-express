@@ -8,6 +8,8 @@ class ServiceType
 
     const SERVICE_TYPE_DOMESTIC_EXPRESS_12 = '1';
 
+    const SERVICE_INTERNATIONAL_EXPRESS_12 = 'T';
+
     /**
      * @var TotalNetType $TotalNet
      */
@@ -50,9 +52,9 @@ class ServiceType
      */
     public function __construct($TotalNet, $type, $account)
     {
-      $this->TotalNet = $TotalNet;
-      $this->type = $type;
-      $this->account = $account;
+        $this->TotalNet = $TotalNet;
+        $this->type = $type;
+        $this->account = $account;
     }
 
     /**
@@ -60,7 +62,7 @@ class ServiceType
      */
     public function getTotalNet()
     {
-      return $this->TotalNet;
+        return $this->TotalNet;
     }
 
     /**
@@ -69,8 +71,8 @@ class ServiceType
      */
     public function setTotalNet($TotalNet)
     {
-      $this->TotalNet = $TotalNet;
-      return $this;
+        $this->TotalNet = $TotalNet;
+        return $this;
     }
 
     /**
@@ -78,7 +80,7 @@ class ServiceType
      */
     public function getCharges()
     {
-      return $this->Charges;
+        return $this->Charges;
     }
 
     /**
@@ -87,8 +89,8 @@ class ServiceType
      */
     public function setCharges($Charges)
     {
-      $this->Charges = $Charges;
-      return $this;
+        $this->Charges = $Charges;
+        return $this;
     }
 
     /**
@@ -96,15 +98,15 @@ class ServiceType
      */
     public function getDeliveryTime()
     {
-      if ($this->DeliveryTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->DeliveryTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->DeliveryTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->DeliveryTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -113,12 +115,12 @@ class ServiceType
      */
     public function setDeliveryTime(\DateTime $DeliveryTime = null)
     {
-      if ($DeliveryTime == null) {
-       $this->DeliveryTime = null;
-      } else {
-        $this->DeliveryTime = $DeliveryTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($DeliveryTime == null) {
+            $this->DeliveryTime = null;
+        } else {
+            $this->DeliveryTime = $DeliveryTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
@@ -126,15 +128,15 @@ class ServiceType
      */
     public function getCutoffTime()
     {
-      if ($this->CutoffTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->CutoffTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->CutoffTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->CutoffTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -143,12 +145,12 @@ class ServiceType
      */
     public function setCutoffTime(\DateTime $CutoffTime = null)
     {
-      if ($CutoffTime == null) {
-       $this->CutoffTime = null;
-      } else {
-        $this->CutoffTime = $CutoffTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($CutoffTime == null) {
+            $this->CutoffTime = null;
+        } else {
+            $this->CutoffTime = $CutoffTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
@@ -156,7 +158,7 @@ class ServiceType
      */
     public function getNextBusinessDayInd()
     {
-      return $this->NextBusinessDayInd;
+        return $this->NextBusinessDayInd;
     }
 
     /**
@@ -165,8 +167,8 @@ class ServiceType
      */
     public function setNextBusinessDayInd($NextBusinessDayInd)
     {
-      $this->NextBusinessDayInd = $NextBusinessDayInd;
-      return $this;
+        $this->NextBusinessDayInd = $NextBusinessDayInd;
+        return $this;
     }
 
     /**
@@ -174,7 +176,7 @@ class ServiceType
      */
     public function getType()
     {
-      return $this->type;
+        return $this->type;
     }
 
     /**
@@ -183,8 +185,8 @@ class ServiceType
      */
     public function setType($type)
     {
-      $this->type = $type;
-      return $this;
+        $this->type = $type;
+        return $this;
     }
 
     /**
@@ -192,7 +194,7 @@ class ServiceType
      */
     public function getAccount()
     {
-      return $this->account;
+        return $this->account;
     }
 
     /**
@@ -201,8 +203,8 @@ class ServiceType
      */
     public function setAccount($account)
     {
-      $this->account = $account;
-      return $this;
+        $this->account = $account;
+        return $this;
     }
 
 }
