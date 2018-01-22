@@ -30,17 +30,24 @@ class docTypeRef_RequestedPackagesType
     protected $number = null;
 
     /**
+     * @var null|string
+     */
+    protected $PackageContentDescription = null;
+
+    /**
      * @param string $Weight
      * @param docTypeRef_DimensionsType $Dimensions
      * @param string $CustomerReferences
      * @param string $number
+     * @param string $PackageContentDescription
      */
-    public function __construct($Weight, $Dimensions, $CustomerReferences, $number)
+    public function __construct($Weight, $Dimensions, $CustomerReferences, $number, $PackageContentDescription = null)
     {
       $this->Weight = $Weight;
       $this->Dimensions = $Dimensions;
       $this->CustomerReferences = $CustomerReferences;
       $this->number = $number;
+      $this->PackageContentDescription = $PackageContentDescription;
     }
 
     /**
@@ -48,7 +55,7 @@ class docTypeRef_RequestedPackagesType
      */
     public function getInsuredValue()
     {
-      return $this->InsuredValue;
+        return $this->InsuredValue;
     }
 
     /**
@@ -130,6 +137,24 @@ class docTypeRef_RequestedPackagesType
     public function setNumber($number)
     {
       $this->number = $number;
+      return $this;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getPackageContentDescription()
+    {
+      return $this->PackageContentDescription;
+    }
+
+    /**
+     * @param null|string $PackageContentDescription
+     * @return \DHL\Express\Webservice\docTypeRef_RequestedPackagesType
+     */
+    public function setPackageContentDescription($PackageContentDescription = null)
+    {
+      $this->PackageContentDescription = $PackageContentDescription;
       return $this;
     }
 }
