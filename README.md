@@ -236,6 +236,10 @@ class TrackingService
 
 ```
 
+## Acknowledgements
+
+The base version of this library was generated with [wsdl2phpgenerator](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator).
+
 ## Support
 
 Please use the GitHub issue tracker. For commercial support for your project contact
